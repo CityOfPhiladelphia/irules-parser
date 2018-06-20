@@ -15,7 +15,7 @@ def matches_pattern(line):
   return re.search(pattern, line)
 
 def matches_rule(line):
-  pattern = re.compile(r"(.+) \"?(.+)\"?")
+  pattern = re.compile(r"(\S*) \"?([^\n\"]*)\"?")
   return re.search(pattern, line)
 
 @click.command()
